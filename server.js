@@ -13,4 +13,6 @@ app.get('/notes', (req, res) => {
 app.get('/', (req, res) => {
  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
-app.listen(3000)
+//making a port to heroku
+const port = process.env.PORT || 3000
+app.listen(port)
