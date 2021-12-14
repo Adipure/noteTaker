@@ -28,14 +28,14 @@ router.post('/api/notes', (req, res) => {
 //delete note
 router.delete('/api/notes/:id', (req, res) => {
  fs.readFile(path.join(__dirname, '..', 'db', 'db.json'), 'utf-8', (err, data) => {
-  const notes = JSON.parse(data)
-  for (let i = 0; i < notes.length; i++) {
-   const dbElement = notes[i];
+  const deleteNotes = JSON.parse(data)
+  for (let i = 0; i < deleteNotes.length; i++) {
+   const dbElement = deleteNotes[i];
    if (dbElement.id === req.params.id) {
-    notes.splice(i, 1)
+    deleteNotes.splice(i, 1)
    }
   }
-  fs.writeFile(path.join(__dirname, '..', 'db', 'db.json'), JSON.stringify(notes), err => {
+  fs.writeFile(path.join(__dirname, '..', 'db', 'db.json'), JSON.stringify(deleteNotes), err => {
    if (err) { console.log(err) }
    res.sendStatus(200)
   })
