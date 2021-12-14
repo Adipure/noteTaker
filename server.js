@@ -6,6 +6,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.use(require('./routes/apiRoutes.js'))
-app.use(require('./routes/htmlRoutes.js'))
+app.use(require('./routes/apiRoute.js'))
+app.use(require('./routes/htmlRoute.js'))
 app.listen(3000)
