@@ -33,8 +33,9 @@
 You are required to submit the following:
 
 * The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
+https://chanwoonotetaker.herokuapp.com/
 
 * The URL of the GitHub repository
-
+https://adipure.github.io/noteTaker/
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
